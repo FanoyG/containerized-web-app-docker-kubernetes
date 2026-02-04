@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Cheat Sheet</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="cheet.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         TOP NAVIGATION
+         ========================= -->
+    <div class="top-nav">
+
+        <!-- Left side: Hamburger + Title -->
+        <div class="top-nav-left">
+            <button class="sidebar-toggle-btn" id="toggleSidebar" aria-label="Toggle sidebar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logo">🎯 Command Cheat Sheet</div>
+        </div>
+
+        <!-- Right side: Search + Links -->
+        <div class="top-nav-right">
+            <div class="search-bar">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search commands..."
+                    aria-label="Search commands"
+                >
+            </div>
+
+            <div class="nav-links">
+                <button class="nav-link" onclick="openAbout()">About</button>
+                <button class="nav-link" onclick="openContact()">Contact</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================
+         MAIN CONTAINER
+         ========================= -->
+    <div class="container">
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+
+            <div class="category">
+                <div class="category-title">Operating Systems</div>
+                <div class="menu-item active" data-category="windows">
+                    <span class="menu-icon">🪟</span> Windows
+                </div>
+                <div class="menu-item" data-category="linux">
+                    <span class="menu-icon">🐧</span> Linux
+                </div>
+                <div class="menu-item" data-category="macos">
+                    <span class="menu-icon">🍎</span> macOS
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">Networking</div>
+                <div class="menu-item" data-category="networking">
+                    <span class="menu-icon">🌐</span> Network Commands
+                </div>
+                <div class="menu-item" data-category="security">
+                    <span class="menu-icon">🔒</span> Security Tools
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">Development</div>
+                <div class="menu-item" data-category="git">
+                    <span class="menu-icon">📦</span> Git Commands
+                </div>
+                <div class="menu-item" data-category="docker">
+                    <span class="menu-icon">🐳</span> Docker
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">Databases</div>
+                <div class="menu-item" data-category="mysql">
+                    <span class="menu-icon">🗄️</span> MySQL
+                </div>
+                <div class="menu-item" data-category="postgresql">
+                    <span class="menu-icon">🐘</span> PostgreSQL
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Content Area -->
+        <div class="content" id="contentArea">
+            <!-- Dynamic content rendered by cheet.js -->
+        </div>
+        
+        
+        
+    </div>
+    <!-- =========================
+        FOOTER
+    ========================= -->
+    <footer class="app-footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>🎯 Command Cheat Sheet</h3>
+                <p>
+                    Practical command reference for systems,
+                    networking, security, and development.
+                </p>
+            </div>
+
+            <div class="footer-right">
+                <span class="footer-label">Connect</span>
+                <div class="footer-socials">
+                    <a href="#" title="GitHub">🐙 Github</a>
+                    <a href="#" title="LinkedIn">💼 LinkedIn</a>
+                    <a href="#" title="Twitter / X">🐦Twitter</a>
+                    <a href="#" title="Email">✉️Email</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 Command Cheat Sheet · Built for learning & practice
+        </div>
+    </footer>
+
+    <!-- =========================
+         SCRIPTS
+         ========================= -->
+    <script src="commands.js"></script>
+    <script src="cheet.js"></script>
+
+</body>
+</html>
