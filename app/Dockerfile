@@ -25,8 +25,6 @@ USER 101
 EXPOSE 8080
 
 # Docker health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD wget -q -O /dev/null http://127.0.0.1:8080/healthz || exit 1
-
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 CMD ["wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8080/healthz"]
 # Generate configuration and start NGINX
 CMD ["/bin/sh", "-c", "envsubst '${BUILD_SHA}' < /etc/nginx/conf.d/default.conf.template > /tmp/default.conf && cp /tmp/default.conf /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"]
